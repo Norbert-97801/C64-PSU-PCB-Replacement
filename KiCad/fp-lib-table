@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name C64-PSU-PCB-replacement-for-902503-06)(type KiCad)(uri ${KIPRJMOD}/C64-PSU-PCB-replacement-for-902503-06.pretty)(options "")(descr ""))
+)

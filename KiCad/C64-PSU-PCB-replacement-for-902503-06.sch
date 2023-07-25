@@ -1,0 +1,490 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 5197 7244
+encoding utf-8
+Sheet 1 1
+Title "C64-PSU-Board (Drop-In replacement)"
+Date "2022-02-06 / Last Change: 2023-07-25"
+Rev "D"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 "OSHW"
+$EndDescr
+Wire Wire Line
+	2000 4000 2475 4000
+Connection ~ 2000 4000
+Wire Wire Line
+	2000 4000 2000 4125
+Wire Wire Line
+	1875 4000 2000 4000
+Wire Wire Line
+	2475 4000 2900 4000
+Wire Wire Line
+	2900 4000 3325 4000
+Connection ~ 2900 4000
+Connection ~ 2475 4000
+Wire Wire Line
+	2000 4425 2000 4575
+$Comp
+L power:GND #PWR0108
+U 1 1 624D5234
+P 2000 4575
+F 0 "#PWR0108" H 2000 4325 50  0001 C CNN
+F 1 "GND" H 2005 4402 50  0000 C CNN
+F 2 "" H 2000 4575 50  0001 C CNN
+F 3 "" H 2000 4575 50  0001 C CNN
+	1    2000 4575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 624D3831
+P 2000 4275
+F 0 "C3" H 2125 4225 50  0000 L CNN
+F 1 "100nF" H 2125 4300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2038 4125 50  0001 C CNN
+F 3 "~" H 2000 4275 50  0001 C CNN
+	1    2000 4275
+	1    0    0    1   
+$EndComp
+Text Label 1875 2375 0    50   ~ 0
++16V
+Wire Wire Line
+	1875 3100 1875 2375
+Connection ~ 1875 3100
+Wire Wire Line
+	1475 3100 1875 3100
+Wire Wire Line
+	1475 3125 1475 3100
+Wire Wire Line
+	1475 3475 2000 3475
+Connection ~ 1475 3475
+Wire Wire Line
+	1475 3425 1475 3475
+$Comp
+L Device:C C2
+U 1 1 624C91A8
+P 1475 3275
+F 0 "C2" H 1590 3321 50  0000 L CNN
+F 1 "100nF" H 1590 3230 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1513 3125 50  0001 C CNN
+F 3 "~" H 1475 3275 50  0001 C CNN
+	1    1475 3275
+	1    0    0    -1  
+$EndComp
+Text Label 4150 4100 2    50   ~ 0
+GND
+Text Label 4150 4000 2    50   ~ 0
++5,1V
+Text Notes 1525 3800 0    50   ~ 0
+or
+Wire Wire Line
+	2300 875  2300 975 
+Wire Wire Line
+	2300 1275 2300 1550
+Wire Wire Line
+	3725 4425 3725 4575
+Wire Wire Line
+	3725 4000 4150 4000
+Connection ~ 3725 4000
+Wire Wire Line
+	3725 4125 3725 4000
+Wire Wire Line
+	3725 4875 3725 5025
+$Comp
+L power:GND #PWR0107
+U 1 1 621D6F8D
+P 3725 5025
+F 0 "#PWR0107" H 3725 4775 50  0001 C CNN
+F 1 "GND" H 3730 4852 50  0000 C CNN
+F 2 "" H 3725 5025 50  0001 C CNN
+F 3 "" H 3725 5025 50  0001 C CNN
+	1    3725 5025
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D7
+U 1 1 621D1F6F
+P 3725 4725
+F 0 "D7" V 3764 4607 50  0000 R CNN
+F 1 "LED" V 3673 4607 50  0000 R CNN
+F 2 "Diode_SMD:D_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 3725 4725 50  0001 C CNN
+F 3 "~" H 3725 4725 50  0001 C CNN
+	1    3725 4725
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 621D15D9
+P 3725 4275
+F 0 "R2" H 3795 4321 50  0000 L CNN
+F 1 "4K7" H 3795 4230 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3655 4275 50  0001 C CNN
+F 3 "~" H 3725 4275 50  0001 C CNN
+	1    3725 4275
+	1    0    0    -1  
+$EndComp
+Connection ~ 2300 975 
+Connection ~ 2300 1275
+$Comp
+L Connector:Conn_01x01_Female J4
+U 1 1 621C260B
+P 2100 1275
+F 0 "J4" H 2150 1275 50  0000 C CNN
+F 1 "F-Mount" H 1992 1141 50  0001 C CNN
+F 2 "Connector_Pin:Pin_D1.3mm_L11.0mm" H 2100 1275 50  0001 C CNN
+F 3 "~" H 2100 1275 50  0001 C CNN
+	1    2100 1275
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J3
+U 1 1 621C16A5
+P 2100 975
+F 0 "J3" H 2150 975 50  0000 C CNN
+F 1 "F-Mount" H 1992 841 50  0001 C CNN
+F 2 "Connector_Pin:Pin_D1.3mm_L11.0mm" H 2100 975 50  0001 C CNN
+F 3 "~" H 2100 975 50  0001 C CNN
+	1    2100 975 
+	-1   0    0    1   
+$EndComp
+$Comp
+L Regulator_Linear:LM7805_TO220 U0
+U 1 1 62065493
+P 950 5025
+F 0 "U0" H 950 5267 50  0000 C CNN
+F 1 "TO220_for_install" H 950 5176 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 950 5250 50  0001 C CIN
+F 3 "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF" H 950 4975 50  0001 C CNN
+	1    950  5025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 1550 2525 1550
+Connection ~ 2300 1550
+Wire Wire Line
+	2425 775  2425 1900
+Wire Wire Line
+	2250 1550 2300 1550
+Wire Wire Line
+	2425 1900 2525 1900
+Connection ~ 2425 1900
+Wire Wire Line
+	1700 775  2425 775 
+Wire Wire Line
+	2300 875  1700 875 
+Connection ~ 3325 4000
+$Comp
+L Device:Fuse F2
+U 1 1 61FFFEE4
+P 2300 1125
+F 0 "F2" H 2360 1171 50  0000 L CNN
+F 1 "Fuse" H 2360 1080 50  0000 L CNN
+F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open" V 2230 1125 50  0001 C CNN
+F 3 "~" H 2300 1125 50  0001 C CNN
+	1    2300 1125
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3325 4425 3325 4575
+$Comp
+L power:GND #PWR0106
+U 1 1 735D767D
+P 3325 4575
+F 0 "#PWR0106" H 3325 4325 50  0001 C CNN
+F 1 "GND" H 3330 4402 50  0000 C CNN
+F 2 "" H 3325 4575 50  0001 C CNN
+F 3 "" H 3325 4575 50  0001 C CNN
+	1    3325 4575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 4425 2900 4575
+$Comp
+L power:GND #PWR0105
+U 1 1 735D6877
+P 2900 4575
+F 0 "#PWR0105" H 2900 4325 50  0001 C CNN
+F 1 "GND" H 2905 4402 50  0000 C CNN
+F 2 "" H 2900 4575 50  0001 C CNN
+F 3 "" H 2900 4575 50  0001 C CNN
+	1    2900 4575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2475 4425 2475 4575
+$Comp
+L power:GND #PWR0104
+U 1 1 735D5BC7
+P 2475 4575
+F 0 "#PWR0104" H 2475 4325 50  0001 C CNN
+F 1 "GND" H 2480 4402 50  0000 C CNN
+F 2 "" H 2475 4575 50  0001 C CNN
+F 3 "" H 2475 4575 50  0001 C CNN
+	1    2475 4575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3325 4125 3325 4000
+Wire Wire Line
+	2900 4125 2900 4000
+Wire Wire Line
+	2475 4125 2475 4000
+$Comp
+L Device:C C6
+U 1 1 735D2B3E
+P 3325 4275
+F 0 "C6" H 3440 4321 50  0000 L CNN
+F 1 "10µF" H 3440 4230 50  0000 L CNN
+F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 3363 4125 50  0001 C CNN
+F 3 "~" H 3325 4275 50  0001 C CNN
+	1    3325 4275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 735D225A
+P 2900 4275
+F 0 "C5" H 3015 4321 50  0000 L CNN
+F 1 "10µF" H 3015 4230 50  0000 L CNN
+F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 2938 4125 50  0001 C CNN
+F 3 "~" H 2900 4275 50  0001 C CNN
+	1    2900 4275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 735D151B
+P 2475 4275
+F 0 "C4" H 2590 4321 50  0000 L CNN
+F 1 "10µF" H 2590 4230 50  0000 L CNN
+F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 2513 4125 50  0001 C CNN
+F 3 "~" H 2475 4275 50  0001 C CNN
+	1    2475 4275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1375 3975 1425 3975
+Connection ~ 1375 3975
+Wire Wire Line
+	1375 4125 1375 3975
+Wire Wire Line
+	1575 4125 1375 4125
+Wire Wire Line
+	1800 3675 2000 3675
+Connection ~ 1800 3675
+Wire Wire Line
+	1800 3975 1800 3675
+Wire Wire Line
+	1725 3975 1800 3975
+Connection ~ 1275 3975
+Connection ~ 1275 3675
+Wire Wire Line
+	1275 3975 1375 3975
+Wire Wire Line
+	1275 3675 1275 3975
+$Comp
+L Device:R_POT_TRIM RV1
+U 1 1 735CDBF4
+P 1575 3975
+F 0 "RV1" V 1575 3975 50  0000 C CNN
+F 1 "500 Ohm" V 1459 3975 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 1575 3975 50  0001 C CNN
+F 3 "~" H 1575 3975 50  0001 C CNN
+	1    1575 3975
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	4075 4100 4075 4175
+Wire Wire Line
+	4150 4100 4075 4100
+$Comp
+L power:GND #PWR0103
+U 1 1 735CBC23
+P 4075 4175
+F 0 "#PWR0103" H 4075 3925 50  0001 C CNN
+F 1 "GND" H 4080 4002 50  0000 C CNN
+F 2 "" H 4075 4175 50  0001 C CNN
+F 3 "" H 4075 4175 50  0001 C CNN
+	1    4075 4175
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J2
+U 1 1 735C827B
+P 4350 4000
+F 0 "J2" H 4325 4150 50  0000 L CNN
+F 1 "5,1V DC" H 4325 4075 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4350 4000 50  0001 C CNN
+F 3 "~" H 4350 4000 50  0001 C CNN
+	1    4350 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1875 3575 1875 4000
+Wire Wire Line
+	2000 3575 1875 3575
+Wire Wire Line
+	1725 3675 1800 3675
+Wire Wire Line
+	1275 3975 1275 4125
+Wire Wire Line
+	1425 3675 1275 3675
+Wire Wire Line
+	1275 3475 1475 3475
+$Comp
+L Device:R R1
+U 1 1 735C184F
+P 1575 3675
+F 0 "R1" V 1575 3675 50  0000 C CNN
+F 1 "262,1 Ohm" V 1459 3675 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 1505 3675 50  0001 C CNN
+F 3 "~" H 1575 3675 50  0001 C CNN
+	1    1575 3675
+	0    1    1    0   
+$EndComp
+Connection ~ 1875 2375
+Wire Wire Line
+	1875 3375 1875 3100
+Wire Wire Line
+	2000 3375 1875 3375
+Wire Wire Line
+	1275 3475 1275 3675
+$Comp
+L power:GND #PWR0102
+U 1 1 735BE1C6
+P 1275 4125
+F 0 "#PWR0102" H 1275 3875 50  0001 C CNN
+F 1 "GND" H 1280 3952 50  0000 C CNN
+F 2 "" H 1275 4125 50  0001 C CNN
+F 3 "" H 1275 4125 50  0001 C CNN
+	1    1275 4125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2875 1900 2875 2375
+$Comp
+L SamacSys_Parts:OKR-T_1.5-W12-C PS1
+U 1 1 735B8214
+P 2000 3275
+F 0 "PS1" H 3628 3121 50  0000 L CNN
+F 1 "OKR-T3-W12-C" H 3628 3030 50  0000 L CNN
+F 2 "OKRT15W12C" H 3650 3375 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/OKR-T_1.5-W12-C.pdf" H 3650 3275 50  0001 L CNN
+F 4 "MURATA POWER SOLUTIONS - OKR-T/1.5-W12-C - DC-DC CONVERTER, NON-ISO POL, ADJUSTABLE O/P, 1.5A, 7.5W" H 3650 3175 50  0001 L CNN "Description"
+F 5 "10.16" H 3650 3075 50  0001 L CNN "Height"
+F 6 "580-OKR-T/1.5-W12-C" H 3650 2975 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=580-OKR-T%2F1.5-W12-C" H 3650 2875 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Murata Electronics" H 3650 2775 50  0001 L CNN "Manufacturer_Name"
+F 9 "OKR-T/1.5-W12-C" H 3650 2675 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2000 3275
+	1    0    0    -1  
+$EndComp
+Connection ~ 2875 2375
+Wire Wire Line
+	2875 2500 2875 2375
+Wire Wire Line
+	2875 1550 2875 1900
+Wire Wire Line
+	2525 2375 2875 2375
+Connection ~ 2875 1900
+Connection ~ 1875 1900
+Wire Wire Line
+	1875 2375 1875 1900
+Wire Wire Line
+	2225 2375 1875 2375
+$Comp
+L Device:CP C1
+U 1 1 735B43AF
+P 2375 2375
+F 0 "C1" V 2630 2375 50  0000 C CNN
+F 1 "4700µF/16V" V 2539 2375 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Axial_L46.0mm_D20.0mm_P52.00mm_Horizontal" H 2413 2225 50  0001 C CNN
+F 3 "~" H 2375 2375 50  0001 C CNN
+	1    2375 2375
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3325 4000 3725 4000
+$Comp
+L Connector:Conn_01x02_Female J1
+U 1 1 735B2C11
+P 1500 775
+F 0 "J1" H 1525 850 50  0000 L CNN
+F 1 "7V AC" H 1525 725 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1500 775 50  0001 C CNN
+F 3 "~" H 1500 775 50  0001 C CNN
+	1    1500 775 
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 735B0EEE
+P 2875 2500
+F 0 "#PWR0101" H 2875 2250 50  0001 C CNN
+F 1 "GND" H 2880 2327 50  0000 C CNN
+F 2 "" H 2875 2500 50  0001 C CNN
+F 3 "" H 2875 2500 50  0001 C CNN
+	1    2875 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2875 1900 2825 1900
+Wire Wire Line
+	2825 1550 2875 1550
+Wire Wire Line
+	1875 1900 1950 1900
+Wire Wire Line
+	1875 1550 1875 1900
+Wire Wire Line
+	1950 1550 1875 1550
+$Comp
+L Diode:1N5822 D4
+U 1 1 735AE956
+P 2675 1900
+F 0 "D4" H 2675 2075 50  0000 C CNN
+F 1 "1N5822" H 2675 2000 50  0000 C CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 2675 1725 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 2675 1900 50  0001 C CNN
+	1    2675 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N5822 D2
+U 1 1 735AE950
+P 2100 1900
+F 0 "D2" H 2100 2075 50  0000 C CNN
+F 1 "1N5822" H 2100 2000 50  0000 C CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 2100 1725 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 2100 1900 50  0001 C CNN
+	1    2100 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N5822 D3
+U 1 1 735AC63F
+P 2675 1550
+F 0 "D3" H 2675 1725 50  0000 C CNN
+F 1 "1N5822" H 2675 1650 50  0000 C CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 2675 1375 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 2675 1550 50  0001 C CNN
+	1    2675 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N5822 D1
+U 1 1 735AB832
+P 2100 1550
+F 0 "D1" H 2100 1725 50  0000 C CNN
+F 1 "1N5822" H 2100 1650 50  0000 C CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 2100 1375 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 2100 1550 50  0001 C CNN
+	1    2100 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 1900 2425 1900
+$EndSCHEMATC
