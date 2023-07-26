@@ -1,7 +1,3 @@
-<style type="text/css">
-.image-left {display: block; margin-left: auto; margin-right: auto; float: right; }
-</style>
-
 # C64-PSU-PCB-Replacement
 
 ## PSU PCB Replacement for the Commodore C64 PSU 902503-06
